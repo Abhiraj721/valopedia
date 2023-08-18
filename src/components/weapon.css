@@ -1,0 +1,199 @@
+.weaponimg {
+  height: 67px;
+  margin: 0 auto;
+}
+.weaponimgcontainer {
+}
+.weaponcard {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  font-family: "Ubuntu";
+  
+}
+.secweapon {
+  margin-bottom: 12px;
+}
+.weaponname {
+  font-family: valorant;
+}
+.weaponinfoimg{
+    height: 150px;
+
+   
+}
+@media (max-width: 767px) {
+  .weaponinfoimg {
+    height: 78px;
+    max-width: 93%;
+  }
+}
+.weaponinfoimgcontainer{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .weaponstats{
+    font-family: "Ubuntu";
+
+
+  }
+  .innerweaponstats{
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    padding: 42px;
+  }
+  .damagestats{
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  padding: 42px;
+}
+.innerdamagestats{
+    margin-bottom: 12px;
+}
+.headinfo{
+    font-family: 'Ubuntu';
+    font-weight: bolder;
+}
+.sortme label{
+  font-size: 20px;
+  font-family: "valorant";
+}
+
+.sortme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.sortme {
+    padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.sortby {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+.sortby select {
+  padding: 8px;
+  background-color: #fff;
+  width: 120px;
+font-family:'Ubuntu';
+height: 26px;
+  color: #333;
+  font-size: 14px;
+  border: none;
+}
+
+.sortby:hover {
+  border-color: #666;
+}
+
+
+.sortby:focus {
+  border-color: #333;
+}
+
+/* on hover  */
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transform: translatey(-100px);
+  -ms-transform: translatey(-100px);
+  transform: translatey(-100px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+}
+
+.hovereffect .info {
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #fff;
+  font-family: "Ubuntu";
+  font-weight: bold;
+  background-color: transparent;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  margin: 50px 0 0;
+  padding: 7px 14px;
+}
+
+.hovereffect .info:hover {
+  box-shadow: 0 0 5px #fff;
+}
+
+.hovereffect:hover img {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.hovereffect:hover h2,
+.hovereffect:hover .info {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -ms-transform: translatey(0);
+  -webkit-transform: translatey(0);
+  transform: translatey(0);
+}
+
+.hovereffect:hover .info {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}

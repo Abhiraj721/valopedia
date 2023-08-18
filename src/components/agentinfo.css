@@ -1,0 +1,76 @@
+
+.agentinfoimg{
+    width: 100%;
+    background-size: 100% 100%;
+    
+}
+.agentbackimg{
+    background-size: 100% 100%;
+}
+.infoagentimg{
+    background-size: 100% 100%;
+}
+.agentinfosec{
+    margin: 0 auto;
+}
+
+.agentinfo{
+ 
+    background-size: 120% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.agentinfo{
+    color: white;
+
+}
+.groupdisplay{
+ font-family: 'Ubuntu';
+    margin-bottom: 54px;
+   width: 66%;
+}
+@media (max-width: 767px) {
+    .groupdisplay {
+   width: 79%;
+
+    }
+  }
+  .agenthead{
+    font-family: valorant;
+  }
+  .iconagent{
+    height: 38px;
+    position: relative;
+    bottom: 2px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+  .ablilitiestoggle{
+    display: flex;
+    justify-content: space-around;
+}
+.abilitybtnimg{
+   
+    height: 42px;
+
+}
+.abilitybtn{
+    background-color: rgb(255, 11, 11);
+    border: none;
+    cursor: pointer;
+    border-radius: 12%;
+    
+}
+.abilitybtn:hover {
+background-color: green;
+  }
+.contentability{
+    margin-top: 12px;
+ font-family: 'Ubuntu';
+
+    width: 83%;
+}
+.abilitysec{
+    background-color:antiquewhite;
+}
