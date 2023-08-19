@@ -17,7 +17,7 @@ export default function Weaponinfo({
   }, []);
   const data = weapondata[weaponClicked];
   return (
-    <div>
+    <div className="container">
       <div>
         <div>
           <h1 style={{ fontFamily: "valorant" }}>{data.displayName}</h1>

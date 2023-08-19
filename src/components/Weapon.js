@@ -29,7 +29,7 @@ export default function Weapon({
         <option value={"shotgun"}>Shotgun</option>
       </select>
       </div>
-      <div className="row">
+      <div className="row parentweapon">
     
         {weapondata.map((weapon, index) => {
           

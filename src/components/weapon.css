@@ -9,6 +9,9 @@
   font-family: "Ubuntu";
   
 }
+.parentweapon{
+  margin: 0 auto;
+}
 .secweapon {
   margin-bottom: 12px;
 }

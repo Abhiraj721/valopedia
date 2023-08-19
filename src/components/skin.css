@@ -1,0 +1,62 @@
+.skinimage{
+    height: 58px;
+    margin: 0 auto;
+}
+.skinnamecart{
+    font-size: 17px;
+    font-family: "valorant";
+}
+.skininfopage{
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.skins{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 7px;
+    margin-bottom: 13px;
+    border-radius: 12px;
+}
+.skininfohead{
+    font-family: "valorant";
+}
+.skininfoimg{
+    height: 138px;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+.skinparent{
+    margin: 0 auto;
+}
+.skincontainer{
+    margin-bottom: 12px;
+}
+@media (max-width: 767px) {
+    .skininfoimg {
+        height: 88px;
+        max-width: 100%;
+    }
+}
+    .swatchimg{
+        height: 52px;
+        
+    }
+    .swatch-group{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 12px;
+    }
+    .swatchbtn{
+        background: transparent;
+        border: none;
+    }
+    .streamvideo{
+        width: 96%;
+    }
+    .chromasnotice{
+        font-family: "Ubuntu";
+    }
+    .vfxnotice{
+        font-family: "Ubuntu";
+        
+    }
