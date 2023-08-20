@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../App.css";
 import { Link } from "react-router-dom"; // Import the Link component
-
+import scrollToTop from "./Scrolltotop";
 
 export default function Agents({
   agentsdata,
@@ -10,12 +10,7 @@ export default function Agents({
 }) 
 
 {
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'auto', // This creates a smooth scrolling effect
-    });
-  }
+
   return (
     <div>
       <div className="row agentsparent container-fluid">
@@ -35,8 +30,8 @@ export default function Agents({
                     className="info"
                     to={`/agentinfo/${data.uuid}`}
                     onClick={() => {
-                      setcurragentIndex(index);
                       scrollToTop();
+                      setcurragentIndex(index);
                     }}
                   >
                     Agent Info

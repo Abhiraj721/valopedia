@@ -10,7 +10,9 @@ import Skins from "./components/Skins";
 import Skininfo from "./components/Skininfo";
 import Maps from "./components/Maps";
 import Mapinfo from "./components/Mapinfo";
-import Bundles from "./components/Bundles";
+import Element from "./components/Element";
+import Navigatecard from "./components/Navigatecard";
+import Navbar from "./components/Navbar";
 function App() {
   const [agentsdata, Setagentsdata] = useState([]);
   const [curragentIndex, setcurragentIndex] = useState(0);
@@ -22,6 +24,8 @@ function App() {
   const [currmap,Setcurrmap]=useState(0);
   const [bundlesdata,Setbundlesdata]=useState([]);
 const [buddiesdata,Setbuddiesdata]=useState([]);
+const [spraysdata,Setspraysdata]=useState([]);
+
   function getagentdata()
   {
     fetch("https://valorant-api.com/v1/agents")
@@ -77,31 +81,35 @@ const [buddiesdata,Setbuddiesdata]=useState([]);
       console.log(error)
     })
   }
+  function getspraysdata()
+  {
+    fetch('https://valorant-api.com/v1/sprays').then((response)=>{
+      return response.json();
+    }).then((response)=>{
+      Setspraysdata(response.data);
+        console.log(response.data)
+    }).catch((error)=>{
+      console.log(error)
+    })
+  }
   useEffect(() => {
     getagentdata();
     getweapondata();
     getmapdata();
     getbundlesdata();
     getbuddiesdata();
+    getspraysdata();
   }, []);
 
   return (
     <div className="App">
-      <div style={{display:"flex",justifyContent:"space-between"}}>
-      <Link to="/agents">click me</Link>
-      <br />
-      <Link to="/weapon">click meee</Link>
-      <br />
-      <Link to="/skins">Click mee</Link>
-      <br />
+      <Navbar></Navbar>
 
-      <Link to="/maps">Click meeeee</Link>
-      <Link to="/bundles">Click mee</Link>
-<Link to="/buddies">click mee</Link>
-      </div>
       <br /><br />
       <Routes>
-  
+      <Route exact path={"/"} element={<Navigatecard></Navigatecard>}></Route>
+     
+ 
         <Route
          path="/agents"
           element={
@@ -152,12 +160,15 @@ const [buddiesdata,Setbuddiesdata]=useState([]);
        <Route path="/maps" element={<Maps mapdata={mapdata} Setcurrmap={Setcurrmap}></Maps>}></Route>
    {
     mapdata.map((data,index)=>{
+
       if(data.coordinates==null)return;
      return  <Route path={`/maps/${data.uuid}`} element={<Mapinfo mapdata={mapdata} currmap={currmap} Setcurrmap={Setcurrmap}></Mapinfo>}></Route>
     })
    }
-   <Route path="/bundles" element={<Bundles datatype="bundles" bundlesdata={bundlesdata}></Bundles>}></Route>
-   <Route path="/buddies" element={<Bundles datatype="buddies" bundlesdata={buddiesdata}></Bundles>}></Route>
+   <Route path="/bundles" element={<Element datatype="bundles" elementsdata={bundlesdata}></Element>}></Route>
+   <Route path="/buddies" element={<Element datatype="buddies" elementsdata={buddiesdata}></Element>}></Route>
+   <Route path="/sprays" element={<Element datatype="sprays" elementsdata={spraysdata}></Element>}></Route>
+
 
       </Routes>
     </div>

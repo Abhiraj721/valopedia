@@ -61,6 +61,27 @@ font-family: valorant;
  color: rgb(246, 0, 0);
  opacity: 1;
 }
+.navbar{
+  display: flex;
+  justify-content: center;
+
+}
+.logo{
+  font-family: "valorant";
+  color: red;
+}
+.visitdropdown{
+  width: 94px;
+  
+}
+.dropdownlink{
+  text-decoration: none;
+  display: block;
+  font-family:"Ubuntu";
+  color: #282c34;
+  font-weight: 800;
+}
+
 
   /* on hover  */
   .hovereffect {
@@ -151,3 +172,80 @@ font-family: valorant;
     -webkit-transition-delay:.2s;
     transition-delay:.2s;
     }
+    /* Navbar Styles */
+.custom-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 10px 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}

@@ -10,7 +10,7 @@ export default function Weapon({
   function scrollToTop() {
     window.scrollTo({
       top: 0,
-      behavior: "auto", // This creates a smooth scrolling effect
+      behavior: "auto", 
     });
   }
   const [sortby, Setsortby] = useState("showall");
@@ -29,14 +29,18 @@ export default function Weapon({
         <option value={"shotgun"}>Shotgun</option>
       </select>
       </div>
-      <div className="row parentweapon">
+      <div className="row parentweapon container-fluid">
     
         {weapondata.map((weapon, index) => {
           
          if(sortby!="showall" && (weapon.category).substring(21).toLowerCase()!=sortby)return;
           return (
             <div className="col-lg-4 col-md-6 col-sm-12 secweapon">
-              <div className="weaponcard hovereffect">
+              <div className="weaponcard hovereffect" style={{zIndex:"0"}}>
+
+                <div className="weaponimgcontainer">
+                  <img className="weaponimg" src={weapon.displayIcon} alt="" />
+                </div>
                 <div class="overlay" style={{ zIndex: "1" }}>
                   <Link
                     className="info"
@@ -48,9 +52,6 @@ export default function Weapon({
                   >
                     Weapon info
                   </Link>
-                </div>
-                <div className="weaponimgcontainer">
-                  <img className="weaponimg" src={weapon.displayIcon} alt="" />
                 </div>
                 <h4 className="weaponname">{weapon.displayName}</h4>
                 <p>

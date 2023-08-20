@@ -1,0 +1,66 @@
+.quote {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 47%;
+    height: 134px;
+    padding: 12px;
+}
+@media (max-width: 767px) {
+    .quote {
+        width: 90%;
+    }
+}
+.quotetext{
+font-family: "valorant";
+font-size: 14px;
+
+}
+.authortext{
+    font-family: "valorant";
+color: red;
+}
+.cardimg{
+width: 100%;
+height: 210px;
+    
+}
+@media (max-width: 767px) {
+    .cardimg {
+        height: 190px;
+
+    }
+}
+.titlecard{
+    font-family: "valorant";
+    color: rgb(251, 110, 110);
+    font-weight: 500;
+    font-size: 24px;
+}
+.linkcard{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    width: 100%;
+    padding: 3px;
+    margin-bottom: 12px;
+}
+.onhover{
+    color:white;
+    font-family:"Ubuntu";
+    font-weight: 530;
+}
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  /* Style for the credits */
+  .text-center {
+    margin: 5px 0;
+    font-family: 'Sofia';
+    font-size: 15px;
+    color: #555;
+  }
+  
