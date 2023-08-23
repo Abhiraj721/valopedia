@@ -48,10 +48,9 @@ export default function Element({ datatype, elementsdata }) {
           }}
         />
       </div>
-      {console.log(elementsdata)}
       <div className="row elementparent container-fluid">
         {elementsdata.map((element, index) => {
-                        {console.log(element.tierName)}
+          {console.log(element)}
           if (datatype == "sprays" && element.fullIcon == null) return;
           if (datatype == "ranks" && element.largeIcon == null) return;
           if (
@@ -75,7 +74,7 @@ export default function Element({ datatype, elementsdata }) {
           return (
             <div className="col-lg-4 col-md-6 col-sm-12 elementcard">
               <div className="hovereffect">
-                <div className="elementbackimg" style={datatype==="ranks" && {backgroundColor:"#"+element.backgroundColor} }>
+                <div className="elementbackimg" style={datatype==="ranks" ? {backgroundColor:`#${element.backgroundColor}`} :{ backgroundColor:"transparent"}}>
                   <img
                     className="elementimg"
                     style={

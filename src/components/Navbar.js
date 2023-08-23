@@ -45,6 +45,18 @@ export default function Navbar() {
               <div className="dropdown-item">
                 <Link className='dropdownlink' to="/sprays" onClick={()=>setMenuOpen(!menuOpen)}>Sprays</Link>
               </div>
+              <div className="dropdown-divider" ></div>
+              <div className="dropdown-item">
+                <Link className='dropdownlink' to="/buddies" onClick={()=>setMenuOpen(!menuOpen)}>Buddies</Link>
+              </div>
+              <div className="dropdown-divider" ></div>
+              <div className="dropdown-item">
+                <Link className='dropdownlink' to="/ranks" onClick={()=>setMenuOpen(!menuOpen)}>Ranks</Link>
+              </div>
+              <div className="dropdown-divider" ></div>
+              <div className="dropdown-item">
+                <Link className='dropdownlink' to="/playercard" onClick={()=>setMenuOpen(!menuOpen)}>Player Card</Link>
+              </div>
               
             </div>
           </li>

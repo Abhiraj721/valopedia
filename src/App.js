@@ -107,8 +107,7 @@ async function getcarddata()
 {
   const data=await fetch('https://valorant-api.com/v1/playercards');
   const rankdata=await data.json();
-  Setcarddata(carddata.data)
-  console.log(rankdata.data)
+  Setcarddata(rankdata.data)
 }
   useEffect(() => {
     getagentdata();
