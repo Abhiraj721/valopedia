@@ -25,6 +25,10 @@ function App() {
   const [bundlesdata,Setbundlesdata]=useState([]);
 const [buddiesdata,Setbuddiesdata]=useState([]);
 const [spraysdata,Setspraysdata]=useState([]);
+const [rankdata,Setrankdata]=useState([]);
+const [carddata,Setcarddata]=useState([]);
+
+
 
   function getagentdata()
   {
@@ -92,6 +96,20 @@ const [spraysdata,Setspraysdata]=useState([]);
       console.log(error)
     })
   }
+ async function getrankdata()
+{
+  const data=await fetch('https://valorant-api.com/v1/competitivetiers');
+  const rankdata=await data.json();
+  Setrankdata(rankdata.data[4].tiers)
+}
+
+async function getcarddata()
+{
+  const data=await fetch('https://valorant-api.com/v1/playercards');
+  const rankdata=await data.json();
+  Setcarddata(carddata.data)
+  console.log(rankdata.data)
+}
   useEffect(() => {
     getagentdata();
     getweapondata();
@@ -99,6 +117,8 @@ const [spraysdata,Setspraysdata]=useState([]);
     getbundlesdata();
     getbuddiesdata();
     getspraysdata();
+    getrankdata();
+    getcarddata();
   }, []);
 
   return (
@@ -168,6 +188,10 @@ const [spraysdata,Setspraysdata]=useState([]);
    <Route path="/bundles" element={<Element datatype="bundles" elementsdata={bundlesdata}></Element>}></Route>
    <Route path="/buddies" element={<Element datatype="buddies" elementsdata={buddiesdata}></Element>}></Route>
    <Route path="/sprays" element={<Element datatype="sprays" elementsdata={spraysdata}></Element>}></Route>
+   {console.log(rankdata)}
+   <Route path="/ranks" element={<Element datatype="ranks" elementsdata={rankdata}></Element>}></Route>
+   <Route path="/playercard" element={<Element datatype="cards" elementsdata={carddata}></Element>}></Route>
+
 
 
       </Routes>

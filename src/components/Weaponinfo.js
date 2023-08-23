@@ -63,11 +63,11 @@ export default function Weaponinfo({
             {data.weaponStats.damageRanges.map((weapon, index) => {
               return (
                 <div className="innerdamagestats">
-                  <h5>rangeStartMeters : {weapon.rangeStartMeters}</h5>
-                  <h5>rangeEndMeters : {weapon.legDamage}</h5>
-                  <h5>legDamage : {weapon.rangeStartMeters}</h5>
-                  <h5>headDamage : {weapon.headDamage}</h5>
-                  <h5>bodyDamage : {weapon.bodyDamage}</h5>
+                  <h5>RangeStartMeters : {weapon.rangeStartMeters}</h5>
+                  <h5>RangeEndMeters : {weapon.legDamage}</h5>
+                  <h5>LegDamage : {weapon.rangeStartMeters}</h5>
+                  <h5>HeadDamage : {weapon.headDamage}</h5>
+                  <h5>BodyDamage : {weapon.bodyDamage}</h5>
                   <hr />
                 </div>
               );
